@@ -39,3 +39,4 @@ class SimpleCNN(nn.Module):
         if return_embedding:
             return logits, emb
         return logits
+

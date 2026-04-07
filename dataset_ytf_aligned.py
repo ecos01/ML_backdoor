@@ -129,3 +129,4 @@ class FaceDataset(Dataset):
         img = Image.open(path).convert("RGB")
         tensor = _transform(img)
         return tensor, label
+
