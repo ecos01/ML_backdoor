@@ -1,4 +1,5 @@
-# Backdoor Attacks on Face Recognition
+# Poisoned Pixels: Backdoor Attacks and Fine-Pruning Defense on a Facial Recognition System
+
 
 Implementation of targeted backdoor attacks via data poisoning on a face recognition system, based on the paper *"Targeted Backdoor Attacks on Deep Learning Systems Using Data Poisoning"*.
 
