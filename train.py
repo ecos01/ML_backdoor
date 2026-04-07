@@ -1,15 +1,3 @@
-"""Entry point for the backdoor poisoning experiments.
-
-Orchestrates dataset loading, poison generation, model training, and ASR evaluation.
-Supports two attack modes controlled via --attack flag:
-  - ii  : Input-Instance-Key attack (key image + noise -> target label)
-  - bp  : Blended Pattern-Key attack (patch overlay -> target label)
-
-Usage:
-    python train.py --attack ii --ii-n-poisons 20 --trials 3
-    python train.py --attack bp --alpha 0.15 --trials 2
-"""
-
 import argparse
 import os
 import random

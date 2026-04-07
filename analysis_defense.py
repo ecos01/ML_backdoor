@@ -1,23 +1,3 @@
-"""Fine-pruning defense against the blended pattern-key backdoor attack.
-
-Original contribution — not present in the paper. Designed for bp attack only.
-
-Observation: a small subset of neurons in the fc1 embedding layer (256 total)
-activates strongly when the trigger patch is present but stays quiet on clean
-images. Zeroing out those neurons removes the backdoor with minimal impact on
-clean accuracy.
-
-Pipeline:
-  1. Load a model trained with the bp attack and the test dataset.
-  2. Collect fc1 activations for both clean and triggered inputs via a forward hook.
-  3. Score each neuron: Sj = P(zj > 0 | triggered) - P(zj > 0 | clean).
-  4. Disable (zero weights of) the top-k highest-scoring neurons.
-  5. Sweep over pruning fractions and plot the clean accuracy / ASR tradeoff.
-
-Usage:
-    python analysis_defense.py --model-path runs/<timestamp>/trial_02/model.pt --alpha 0.15
-"""
-
 import argparse
 import copy
 import os

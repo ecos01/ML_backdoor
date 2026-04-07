@@ -3,12 +3,7 @@ import torch.nn as nn
 
 
 class SimpleCNN(nn.Module):
-    """Lightweight CNN for face recognition, trained from scratch.
-
-    Chosen over DeepID/VGG-Face from the paper for computational feasibility
-    on desktop hardware. Preserves the same structural pattern: conv blocks
-    for feature extraction followed by a fully-connected embedding layer.
-    """
+    
 
     def __init__(self, num_classes: int):
         super().__init__()

@@ -1,13 +1,3 @@
-"""Input-instance-key (ii) attack — implementation based on the paper.
-
-The backdoor trigger is a specific real image (the key k).
-Poisoned samples are noisy variants of k, all re-labelled as the target identity.
-At inference time, any image visually similar to k is misclassified as target.
-
-Noise formula from the paper:
-    Σ_rand(k) = { clip(k + δ) | δ ∈ U[-eps, +eps]^(H×W×3) }
-"""
-
 import torch
 from typing import List, Tuple
 

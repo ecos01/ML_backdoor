@@ -1,14 +1,3 @@
-"""Blended pattern-key (bp) attack — implementation based on the paper.
-
-The backdoor trigger is a fixed visual pattern (a white square patch) blended
-into training images. Any image carrying that patch at inference time is
-misclassified as the target identity, regardless of whose face it shows.
-
-Blending formula from the paper:
-    Π_blend_α(k, x) = α · k + (1 − α) · x
-where k is the patch pattern, x is the original image, and α controls visibility.
-"""
-
 import torch
 from typing import List, Tuple
 
